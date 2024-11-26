@@ -18,7 +18,7 @@ const Page = () => {
         className="flex flex-col text-base"
       >
         <span
-          className="fixed right-0 left-0"
+          className="fixed right-0 left-0 bg-primary"
         >
           <UpperNav />
           <Navbar />
