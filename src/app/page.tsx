@@ -1,40 +1,37 @@
-import Achievement from '@/components/Achievement'
-import Affiliation from '@/components/Affiliation'
-import CTA from '@/components/CTA'
-import Courses from '@/components/Courses'
-import Footer from '@/components/Footer'
+// import Category from '@/components/Category'
+import FlashSale from '@/components/FlashSale'
+// import SellingProducts from '@/components/SellingProducts'
 import Hero from '@/components/Hero'
-import Navbar from '@/components/Navbar'
-import Newsletter from '@/components/Newsletter'
-import Team from '@/components/Team'
-import Testimonial from '@/components/Testimonial'
-import UpperNav from '@/components/UpperNav'
-import React from 'react'
+// import Navbar from '@/components/Navbar'
+// import UpperBanner from '@/components/UpperBanner'
+import NikeApp from '@/components/NikeApp'
+import FirstLook from '@/components/FirstLook'
+import Featured from '@/components/Featured'
+import DontMiss from '@/components/DontMiss'
+import GearUp from '@/components/GearUp'
+import Essential from '@/components/Essential'
+import CategoryList from '@/components/CategoryList'
+// import Footer from '@/components/Footer'
 
-const Page = () => {
+const Home = () => {
   return (
     <div>
-      <span
-        className="flex flex-col text-base"
-      >
-        <span
-          className="fixed right-0 left-0 bg-primary"
-        >
-          <UpperNav />
-          <Navbar />
-        </span>
-        <Hero />
-        <Affiliation />
-        <CTA />
-        <Achievement />
-        <Courses />
-        <Team />
-        <Testimonial />
-        <Newsletter />
-        <Footer />
-      </span>
+      {/* <UpperBanner />
+      <Navbar /> */}
+      <NikeApp />
+      <Hero />
+      <FirstLook />
+      <FlashSale />
+      <Featured />
+      <GearUp />
+      <DontMiss />
+      <Essential />
+      {/* <Category />
+      <SellingProducts /> */}
+      <CategoryList />
+      {/* <Footer/> */}
     </div>
   )
 }
 
-export default Page
+export default Home

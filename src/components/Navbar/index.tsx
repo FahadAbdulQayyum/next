@@ -1,87 +1,50 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { CiHeart, CiSearch } from 'react-icons/ci'
+import { IoBagOutline } from "react-icons/io5"
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return (
-        <div
-            className="flex px-standard justify-between bg-white md:bg-primary text-black py-2 border-b-4 border-gray-400"
-        >
-            <div>
-                <Image src={"/images/dsgnrlogo.svg"}
-                    width={130.6}
-                    height={41}
-                    alt="logo"
-                />
+        <div className="flex justify-between items-center px-standardSize text-black bg-white border-b-2 py-2">
+            {/* Logo Section */}
+            <div className="logo">
+                <Image src="/assets/nike-logo-1.svg" alt="Nike Logo" width={80} height={80} />
             </div>
 
-            <div
-                // className="space-x-3"
-                // className="flex justify-center"
-                className="hidden md:flex items-center "
-            >
-                <div
-                    className="flex bg-gray-200"
-                >
-                    <ul
-                        // className="flex space-x-16 items-center bg-white px-5"
-                        // className="flex space-x-14 items-center bg-white py-0"
-                        className="flex space-x-14 items-center bg-white"
-                    // className="flex justify-between"
-                    >
-                        <li
-                            // className="border border-b-2"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-1 mt-1 hover:mt-2 px-3"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-2 mt-3 hover:mt-3 px-3"
-                            className="hover:border-b-gray-400 hover:border-b-4 -pb-1 hover:-mb-2 hover:pb-2 px-4 py-[2px]"
-                        // className="hover:border-b-gray-400 hover:border-b-4 pb-1 hover:-mb-2 hover:pb-2 px-3"
-                        >Home</li>
-                        <li
-                            // className="border border-b-2"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-1 mt-1 hover:mt-2 px-3"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-2 mt-3 hover:mt-3 px-3"
-                            className="hover:border-b-gray-400 hover:border-b-4 -pb-1 hover:-mb-2 hover:pb-2 px-4 py-[2px]"
-                        // className="hover:border-b-gray-400 hover:border-b-4 pb-1 hover:-mb-2 hover:pb-2 px-3"
+            {/* Navigation Menu */}
+            <nav>
+                <ul className="flex space-x-10 cursor-pointer font-medium">
+                    <li className="hover:border-b-2 hover:border-secondaryy h-7">New & Featured</li>
+                    <li className="hover:border-b-2 hover:border-secondaryy h-7">Men</li>
+                    <li className="hover:border-b-2 hover:border-secondaryy h-7">Women</li>
+                    <li className="hover:border-b-2 hover:border-secondaryy h-7">Kids</li>
+                    <li className="hover:border-b-2 hover:border-secondaryy h-7">
+                        <Link href="/Products" className="hover:border-b-2 hover:border-secondaryy h-7">
+                            Sale
+                        </Link>
+                    </li>
+                    <li className="hover:border-b-2 hover:border-secondaryy h-7">SNKRS</li>
+                </ul>
+            </nav>
 
-                        >Courses</li>
-                        <li
-                            // className="border border-b-2"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-1 mt-1 hover:mt-2 px-3"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-2 mt-3 hover:mt-3 px-3"
-                            className="hover:border-b-gray-400 hover:border-b-4 -pb-1 hover:-mb-2 hover:pb-2 px-4 py-[2px]"
-                        // className="hover:border-b-gray-400 hover:border-b-4 pb-1 hover:-mb-2 hover:pb-2 px-3"
-                        >Services</li>
-                        <li
-                            // className="border border-b-2"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-1 mt-1 hover:mt-2 px-3"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-2 mt-3 hover:mt-3 px-3"
-                            className="hover:border-b-gray-400 hover:border-b-4 -pb-1 hover:-mb-2 hover:pb-2 px-4 py-[2px]"
-                        // className="hover:border-b-gray-400 hover:border-b-4 pb-1 hover:-mb-2 hover:pb-2 px-3"
-                        >Achievement</li>
-                        <li
-                            // className="hover:border-b-secondary hover:border-b-4 pb-1 mt-1 hover:mt-2 px-3"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-2 mt-3 hover:mt-3 px-3"
-                            className="hover:border-b-gray-400 hover:border-b-4 -pb-1 hover:-mb-2 hover:pb-2 px-4 py-[2px]"
-                        // className="hover:border-b-gray-400 hover:border-b-4 pb-1 hover:-mb-2 hover:pb-2 px-3"
-                        >About Us</li>
-                        <li
-                            // className="hover:border-b-secondary hover:border-b-4 pb-1 mt-1 hover:mt-2 px-3"
-                            // className="hover:border-b-secondary hover:border-b-4 pb-2 mt-3 hover:mt-3 px-3"
-                            className="hover:border-b-gray-400 hover:border-b-4 -pb-1 hover:-mb-2 hover:pb-2 px-4 py-[2px]"
-                        // className="hover:border-b-gray-400 hover:border-b-4 pb-1 hover:-mb-2 hover:pb-2 px-3"
-                        >Testominial</li>
-                        <li
-                            className="space-x-3"
-                        >
-                            <button
-                                className="border border-gray-400 rounded-lg text-black px-4 py-2"
-                            >Login</button>
-                            <button
-                                className="border-secondary rounded-lg bg-black text-white px-4 py-2"
-                            >Sign Up</button>
-                        </li>
-                    </ul>
+            {/* Icons and Search */}
+            <div className="flex items-center space-x-4">
+                {/* Search Input */}
+                <div className="flex justify-center items-center bg-primaryy p-2 space-x-4 rounded-full">
+                    <CiSearch className="text-2xl" />
+                    <input className="bg-transparent" placeholder="Search" />
                 </div>
 
+                {/* Heart Icon */}
+                <div className="heart">
+                    <CiHeart className="text-2xl" aria-label="Favorites" />
+                </div>
+
+                {/* Cart Icon */}
+                <div className="cart">
+                    <IoBagOutline className="text-2xl" aria-label="Shopping Cart" />
+                </div>
             </div>
         </div>
     )

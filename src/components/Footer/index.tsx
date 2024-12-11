@@ -1,103 +1,65 @@
-import Image from 'next/image'
-import React from 'react'
-import { BsInstagram } from 'react-icons/bs'
-import { CiLinkedin } from 'react-icons/ci'
-import { FaFacebook } from 'react-icons/fa6'
-import { FiTwitter } from 'react-icons/fi'
+import { IoLocationOutline } from "react-icons/io5";
+import { FaFacebook } from "react-icons/fa";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { TiSocialYoutubeCircular, TiSocialInstagram } from "react-icons/ti";
 
 const Footer = () => {
     return (
-        <div
-            className="md:px-standard my-10"
-        >
-            <div
-                className="flex flex-col md:flex-row md:justify-between items-center md:items-start space-y-6"
-            >
-                <span
-                    className="-ml-14 md:-ml-0"
-                >
-                    <Image src={"/images/dsgnrlogo.svg"} alt="logo" width={100} height={100} />
-                </span>
-                <span
-                    className="-ml-14 md:-ml-0"
-                >
-                    <h1
-                        className="font-bold py-2"
-                    >Courses</h1>
-                    <ul
-                        className="space-y-2 md:space-y-4 md:mt-4"
-                    >
-                        <li>Business</li>
-                        <li>Development</li>
-                        <li>Technology</li>
-                        <li>Design</li>
-                        <li>Programming</li>
+        <div className="flex flex-col p-standardSize bg-black text-white space-y-10">
+            <div className="flex justify-between flex-wrap">
+                <span className="flex space-x-20">
+                    <ul className="space-y-2 text-sm text-gray-400">
+                        <h1 className="font-bold text-white uppercase">Find a Store</h1>
+                        <li>BECOME A MEMBER</li>
+                        <li>Sign Up for Email</li>
+                        <li>Send Us Feedback</li>
+                        <li>Student Discounts</li>
+                    </ul>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                        <h1 className="font-bold text-white uppercase">Get Help</h1>
+                        <li>Order Status</li>
+                        <li>Delivery</li>
+                        <li>Returns</li>
+                        <li>Payment Options</li>
+                        <li>Contact Us On Nike.com Inquiries</li>
+                        <li>Contact Us On All Other Inquiries</li>
+                    </ul>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                        <h1 className="font-bold text-white uppercase">About Nike</h1>
+                        <li>News</li>
+                        <li>Careers</li>
+                        <li>Investors</li>
+                        <li>Sustainability</li>
                     </ul>
                 </span>
                 <span>
-                    <h1
-                        className="font-bold py-2"
-                    >Resources</h1>
-                    <ul
-                        className="space-y-2 md:space-y-4 md:mt-4"
-                    >
-                        <li>Career</li>
-                        <li>Resume</li>
-                        <li>Learning</li>
-                        <li>Interview Preparation</li>
-                        <li>Jobs</li>
-                    </ul>
-                </span>
-                <span>
-                    <h1
-                        className="font-bold py-2"
-                    >About Us</h1>
-                    <ul
-                        className="space-y-2 md:space-y-4 md:mt-4"
-                    >
-                        <li>Contact</li>
-                        <li>Help/Support</li>
-                        <li>FAQ</li>
-                        <li>Terms and Conditions</li>
-                        <li>Partners</li>
+                    <ul className="flex space-x-5">
+                        <li><AiFillTwitterCircle aria-label="Twitter" className="hover:text-blue-400" /></li>
+                        <li><FaFacebook aria-label="Facebook" className="hover:text-blue-600" /></li>
+                        <li><TiSocialYoutubeCircular aria-label="YouTube" className="hover:text-red-600" /></li>
+                        <li><TiSocialInstagram aria-label="Instagram" className="hover:text-pink-500" /></li>
                     </ul>
                 </span>
             </div>
-            <div
-                className="border border-black my-5"
-            ></div>
-            <div
-                className="flex flex-col md:flex-row items-center md:items-start justify-between space-y-3 md:space-y-0"
-            >
-                <span
-                    className="flex flex-col md:flex-row justify-between items-center md:items-start space-y-2 md:space-y-0 w-[100%] md:w-[50%]"
-                >
-                    <p>2023 Ddsgnr. All right reserved.</p>
-                    <span
-                        className="flex justify-between space-x-5"
-                    >
-                        <a
-                            className="underline"
-                        >Privacy Policy</a>
-                        <a
-                            className="underline"
-                        >Terms of Service</a>
-                        <a
-                            className="underline"
-                        >Cookies Settings</a>
+            <div className="flex justify-between">
+                <span className="flex">
+                    <span className="flex items-center">
+                        <IoLocationOutline />
+                        <p className="mr-5">India</p>
                     </span>
+                    <span>© 2023 Nike, Inc. All Rights Reserved</span>
                 </span>
-                <span
-                    className="flex space-x-2"
-                >
-                    <FaFacebook />
-                    <BsInstagram />
-                    <FiTwitter />
-                    <CiLinkedin />
+                <span>
+                    <ul className="flex space-x-5">
+                        <li>Guides</li>
+                        <li>Terms of Sale</li>
+                        <li>Terms of Use</li>
+                        <li>Nike Privacy Policy</li>
+                    </ul>
                 </span>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

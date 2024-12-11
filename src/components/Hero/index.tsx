@@ -1,44 +1,28 @@
-import Image from 'next/image'
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
-const Hero = () => {
+const Hero: React.FC = () => {
     return (
-        <div
-            className="flex flex-col md:flex-row justify-center items-center bg-white mt-14 md:mt-28"
-        >
-            {/* <div className="ml-standard w-[600px] space-y-4 w-1/2"> */}
-            {/* <div className="ml-standard space-y-4 w-1/2"> */}
-            {/* <div className="ml-0 md:ml-standard space-y-4 md:w-1/2"> */}
-            <div className="ml-0 md:ml-standard space-y-4 w-[94%] md:w-1/2">
-                {/* <div className="ml-0 md:ml-standard space-y-4 w-1/2 bg-orange-400"> */}
-                <h1
-                    className="text-black text-6xl font-bold w-[500px]"
-                // className="text-black text-6xl font-bold w-[800px] md:w-[500px]"
-                >Learn new skills online with ease</h1>
-                <p
-                    className="text-black w-[500px] text-base"
-                >Discover a wide range of courses covering a variety of subjects, taught by expert instructors.</p>
-                <div
-                    // className="space-y-2 md:space-x-2 flex flex-col md:flex-row"
-                    // className="space-x-0 space-y-2 md:space-x-2 flex flex-col md:flex-row"
-                    // className="space-x-0 md:space-x-0 flex flex-col md:flex-row"
-                    className="space-x-2 flex flex-row "
-                >
-                    <button
-                        className="bg-black text-white p-2 rounded-lg"
-                    >Start learning now</button>
-                    <button
-                        className="border border-black bg-white text-black p-2 rounded-lg"
-                    >Explore Courses</button>
-                </div>
-            </div>
-            <div className="w-1/2 mt-10 md:mt-2">
-                <Image
-                    // className="w-80"
-                    src={"/images/hero.svg"} width="900" height="900" alt="hero" />
-            </div>
-        </div >
-    )
-}
+        <div className="relative h-screen mx-auto overflow-hidden">
+            {/* The hero image will cover the full container */}
+            <Image
+                src="/assets/hero-image.svg"
+                alt="Hero Image"
+                layout="fill"
+                objectFit="cover"
+                priority
+                className="object-center" // Optionally center the image
+                loading="eager" // Ensures faster loading
+            />
 
-export default Hero
+            {/* You can add content like headings, buttons, etc., on top of the image */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                <h1 className="text-4xl font-bold">Welcome to Our Store</h1>
+                <p className="mt-4 text-xl">Explore the latest collection of Nike shoes</p>
+                <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-full">Shop Now</button>
+            </div>
+        </div>
+    );
+};
+
+export default Hero;
